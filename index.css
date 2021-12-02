@@ -31,7 +31,7 @@ main{
   position: relative;
   display: grid;
   grid-template-columns: 33% 33% auto;
-  grid-template-rows: 400px 600px auto;
+  grid-template-rows: 400px 700px auto;
   border-top: solid 3px black;
   border-bottom: solid 3px black;
 }
@@ -47,10 +47,23 @@ main{
   background:rgb(250, 250, 196);
   grid-column: 1/4;
   grid-row:1/2;
-  z-index: 0;
+  z-index: 1;
 }
 
 h1{
+  margin: 0px;
+  display: inline-block;
+}
+
+h2{
+  margin: 0px;
+}
+
+.rule{
+  position: absolute;
+  bottom: 0px;
+}
+h3{
   margin: 0px;
   display: inline-block;
 }
@@ -59,6 +72,7 @@ p{
   margin: 0px;
   display: inline-block;
 }
+
 .youtube {
   position: absolute;
   margin: auto 0px;
@@ -93,14 +107,14 @@ h2{
 }
 
 .cleargame{
-  height: 400px;
-  width: 250px;
-  margin: 25px auto;
+  height: 500px;
+  width: 300px;
+  margin: 0px auto;
   border: solid 2px black;
 }
 
 p1{
-  margin: 0px 50px;
+  margin: 0px 0px;
   display: block;
 }
 
