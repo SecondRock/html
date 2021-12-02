@@ -16,65 +16,116 @@
     <button id="btn_mute">消音</button>
     <input type="range" id="volume" value="0.1" min="0.0" max="1.0" step="0.01">
     <script>
-      window.addEventListener('DOMContentLoaded', function(){
-  const btn_play = document.getElementById("btn_play");
-  const btn_pause = document.getElementById("btn_pause");
-  const btn_mute = document.getElementById("btn_mute");
-  const slider_volume = document.getElementById("volume");
-  const audioElement = document.querySelector("audio");
+      window.addEventListener('DOMContentLoaded', function () {
+        const btn_play = document.getElementById("btn_play");
+        const btn_pause = document.getElementById("btn_pause");
+        const btn_mute = document.getElementById("btn_mute");
+        const slider_volume = document.getElementById("volume");
+        const audioElement = document.querySelector("audio");
 
-  // ボリュームの初期設定
-  audioElement.volume = slider_volume.value;
+        // ボリュームの初期設定
+        audioElement.volume = slider_volume.value;
 
-  btn_play.addEventListener("click", e => {
-    audioElement.play();
-  });
+        btn_play.addEventListener("click", e => {
+          audioElement.play();
+        });
 
-  btn_pause.addEventListener("click", e => {
-    audioElement.pause();
-  });
+        btn_pause.addEventListener("click", e => {
+          audioElement.pause();
+        });
 
-  btn_mute.addEventListener("click", e => {
+        btn_mute.addEventListener("click", e => {
 
-    if( audioElement.muted ) {
-      audioElement.muted = false;
-      btn_mute.textContent = "消音";
-    } else {
-      audioElement.muted = true;
-      btn_mute.textContent = "消音解除";
-    }
-  });
+          if (audioElement.muted) {
+            audioElement.muted = false;
+            btn_mute.textContent = "消音";
+          } else {
+            audioElement.muted = true;
+            btn_mute.textContent = "消音解除";
+          }
+        });
 
-  slider_volume.addEventListener("input", e => {
-    audioElement.volume = slider_volume.value;
-  });
-});
+        slider_volume.addEventListener("input", e => {
+          audioElement.volume = slider_volume.value;
+        });
+      });
     </script>
   </header>
   <main>
     <div class="content">
       <h1>SecondRockクリアしたゲーム報告</h1>
       <p class="min">とHTML CSS勉強</p>
-      <iframe  class="youtube" width="400" height="300" src="https://www.youtube-nocookie.com/embed/FiAhKsq6kXA"
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      
+      <iframe class="youtube" width="400" height="300" src="https://www.youtube-nocookie.com/embed/FiAhKsq6kXA"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     <div class="steam">
-      <h2>SteamGames</h2>
+      <h2>Steam.Games</h2>
       <div class="cleargame">
-        <p1>🔶CounterStrike</p1>
-        <p1>🔶Overwatch</p1>
+        <p1>🔺CounterStrike</p1>
+        <p1>🔺Overwatch</p1>
+        <p1>🔺Z1 Battle Royale</p1>
+        <p1>✅Borderlands 2</p1>
+        <p1>✅METAL GEAR SOLID V</p1>
+        <p1>✅魔改戦記ディスガイア PC</p1>
+        <p1>🔺Left 4 Dead 2</p1>
+        <p1>🔺PAYDAY2C</p1>
+        <p1>🔺Sid Meier's Civilization V</p1>
+        <p1>✅The Forest</p1>
+        <p1>✖Saints RowⅣ</p1>
+        <p1>🔺Fall Guys:Ultimate Knockout</p1>
+        <p1>✖ドラゴンクエストⅪ</p1>
+        <p1>🔺Age of Empires Ⅱ</p1>
       </div>
+      <div class="rule">
+        <h3>説明</h3>
+      <p2>✅:クリア済</p2>
+      <p2>✖:クリア未</p2>
+      <p2>🔺:例外</p2>
+    </div>
     </div>
     <div class="snes">
-      <h2>SnesGames</h2>
+      <h2>Snes.Games</h2>
       <div class="cleargame">
+        <p1>✅DragonQuestⅰ・ⅱ</p1>
+        <p1>✅DragonQuestⅴ</p1>
+        <p1>✅DragonQuestⅵ</p1>
+        <p1>✅マリオコレクション</p1>
+        <p1>✅スーパーマリオワールド</p1>
+        <p1>✖クロノトリガー</p1>
+        <p1>✅トルネコの大冒険 不思議のダンジョン</p1>
+        <p1>✅風来のシレン 不思議のダンジョン</p1>
+        <p1>✖ヨッシーアイランド</p1>
+        <p1>✖ファイアーエムブレム聖戦の系譜</p1>
+        <p1>✖ファイアーエムブレム紋章の謎</p1>
+        <p1>✖ファイアーエムブレムトラキア776</p1>
+        <p1>✅がんばれゴエモン1</p1>
+        <p1>✅がんばれゴエモン2</p1>
+        <p1>✅がんばれゴエモン3</p1>
+        <p1>✅がんばれゴエモン4</p1>
       </div>
     </div>
     <div class="gba">
-      <h2>GBAGames</h2>
+      <h2>GBA/GC.Games</h2>
       <div class="cleargame">
+        <p1>✅ポケットモンスター赤</p1>
+        <p1>✅ポケットモンスター緑</p1>
+        <p1>✅ポケットモンスターピカチュウ</p1>
+        <p1>✅ポケットモンスター青</p1>
+        <p1>✅ポケットモンスター金</p1>
+        <p1>✅ポケットモンスター銀</p1>
+        <p1>✅ポケットモンスタークリスタル</p1>
+        <p1>✅ポケットモンスターサファイア</p1>
+        <p1>✅ポケットモンスターエメラルド</p1>
+        <p1>✅ポケットモンスターファイアレッド</p1>
+        <p1>✅ドラゴンクエストモンスターズテリー</p1>
+        <p1>✅ドラゴンクエストモンスターズイル</p1>
+        <p1>✅ドラゴンクエストモンスターズ　　　　　キャラバンハート</p>
+        <p1>✅トルネコ大冒険3不思議のダンジョン</p>
+        <p1>✅星のカービィ　夢の泉デラックス</p1>
+        <p1>✅</p1>
+        <p1>✅</p1>
       </div>
     </div>
   </main>
