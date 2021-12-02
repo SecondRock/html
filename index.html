@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SecondRock</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="">
+</head>
+
+<body>
+  <header>
+    <audio src="bgm/vivis.mp3" type="audio/mp3"></audio>
+    <button id="btn_play">再生</button>
+    <button id="btn_pause">一時停止</button>
+    <button id="btn_mute">消音</button>
+    <input type="range" id="volume" value="0.1" min="0.0" max="1.0" step="0.01">
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+  const btn_play = document.getElementById("btn_play");
+  const btn_pause = document.getElementById("btn_pause");
+  const btn_mute = document.getElementById("btn_mute");
+  const slider_volume = document.getElementById("volume");
+  const audioElement = document.querySelector("audio");
+
+  // ボリュームの初期設定
+  audioElement.volume = slider_volume.value;
+
+  btn_play.addEventListener("click", e => {
+    audioElement.play();
+  });
+
+  btn_pause.addEventListener("click", e => {
+    audioElement.pause();
+  });
+
+  btn_mute.addEventListener("click", e => {
+
+    if( audioElement.muted ) {
+      audioElement.muted = false;
+      btn_mute.textContent = "消音";
+    } else {
+      audioElement.muted = true;
+      btn_mute.textContent = "消音解除";
+    }
+  });
+
+  slider_volume.addEventListener("input", e => {
+    audioElement.volume = slider_volume.value;
+  });
+});
+    </script>
+  </header>
+  <main>
+    <div class="content">
+      <h1>SecondRockクリアしたゲーム報告</h1>
+      <p class="min">とHTML CSS勉強</p>
+      <iframe  class="youtube" width="400" height="300" src="https://www.youtube-nocookie.com/embed/FiAhKsq6kXA"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      
+    </div>
+    <div class="steam">
+      <h2>SteamGames</h2>
+      <div class="cleargame">
+        <p1>🔶CounterStrike</p1>
+        <p1>🔶Overwatch</p1>
+      </div>
+    </div>
+    <div class="snes">
+      <h2>SnesGames</h2>
+      <div class="cleargame">
+      </div>
+    </div>
+    <div class="gba">
+      <h2>GBAGames</h2>
+      <div class="cleargame">
+      </div>
+    </div>
+  </main>
+  <footer>
+    まりたんらぶち
+  </footer>
+</body>
+
+</html>
