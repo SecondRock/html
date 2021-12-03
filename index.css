@@ -36,6 +36,19 @@ main{
   border-bottom: solid 3px black;
 }
 
+.kousin{
+    position: absolute;
+    margin: 0px;
+    top: 350px;
+    right: 105px;
+}
+
+.live{
+  position: absolute;
+  margin: 0px;
+  top: 5px;
+  right: 175px;
+}
 
 .min{
   font-size: 2px;
@@ -47,6 +60,7 @@ main{
   background:rgb(250, 250, 196);
   grid-column: 1/4;
   grid-row:1/2;
+  border-bottom: solid 1px;
   z-index: 1;
 }
 
