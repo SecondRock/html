@@ -2,6 +2,8 @@ body {
   margin: 0px;
   padding:0px;
   width: 100%;
+  height: 100%;
+  font-family: "游ゴシック","arial unicode ms",sans-serif;
 }
 
 header {
@@ -50,6 +52,13 @@ main{
   right: 175px;
 }
 
+.movie{
+  position: absolute;
+  margin: 0px;
+  top: 5px;
+  left: 175px;
+}
+
 .min{
   font-size: 2px;
 }
@@ -62,6 +71,18 @@ main{
   grid-row:1/2;
   border-bottom: solid 1px;
   z-index: 1;
+  width: 100%;
+}
+
+.top-text{
+  position: absolute;
+  height: 300px;
+  width: 770px;
+  left: 550px;
+}
+
+.top-text p{
+  display: block;
 }
 
 h1{
@@ -87,10 +108,18 @@ p{
   display: inline-block;
 }
 
-.youtube {
+.youtube1 {
   position: absolute;
   margin: auto 0px;
   right: 50px;
+  padding: 0px;
+  display: block;
+}
+
+.youtube2 {
+  position: absolute;
+  margin: auto 0px;
+  left: 50px;
   padding: 0px;
   display: block;
 }
